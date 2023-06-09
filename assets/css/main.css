@@ -1,0 +1,153 @@
+/* Setting variables */
+:root {
+    /* Colors */
+    --primary-pink-darker: rgb(95, 27, 88);
+    --primary-pink-dark: rgb(143, 62, 135);
+    --primary-pink-mid: rgb(180, 103, 173);
+    --primary-pink-light: rgb(214, 145, 209);
+    --primary-pink-lighter: rgb(237, 193, 234);
+    --font-2xl: 3.5rem;
+    --font-xl: 2.5rem;
+    --font-lg: 2.25rem;
+    --font-med: 1.75rem;
+    --font-sm: 1.5rem;
+    --font-xs: 1.25rem;
+}
+
+/* Styling scrollbar */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: var(--primary-pink-dark);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--primary-pink-mid);
+    border-radius: 0px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-pink-light);
+}
+
+/* Initialize body styling */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-pink-dark);
+    font-family: "Righteous", cursive;
+    color: var(--primary-pink-lighter);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Background image (responsive) */
+.background {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: blur(12px) brightness(0.825);
+}
+
+.background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 70%;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    position: relative;
+    margin: 3rem 0 0 0;
+    padding: 0;
+}
+
+.pfp {
+    position: relative;
+    width: 15rem;
+    border-radius: 7.5rem;
+    margin: 1rem 0;
+    padding: 0;
+}
+
+.socials-handle {
+    position: relative;
+    text-align: center;
+    font-size: var(--font-2xl);
+    letter-spacing: 0.15rem;
+    margin: 0.5rem 0 1rem 0;
+    padding: 0;
+}
+
+/* Social Media Tiles */
+.tile-container {
+    position: relative;
+    width: 50%;
+    max-width: 900px;
+    padding: 1.5rem 0;
+    border-radius: 0.8rem;
+    text-align: center;
+    background-color: rgba(143, 62, 135, 0.7);
+    box-shadow: 0 0 20px -8px var(--primary-pink-darker);
+    backdrop-filter: blur(20px);
+    color: var(--primary-pink-light);
+    text-decoration: none;
+    font-size: var(--font-xl);
+    line-height: rem;
+    margin: 1.5rem auto;
+}
+
+.tile {
+    margin: 0;
+    padding: 0;
+}
+
+.subtext {
+    font-size: var(--font-med);
+    opacity: 0.8;
+}
+
+/* Making it responsive on different sized devices */
+@media (min-width: 1440px) {
+}
+
+@media (min-width: 1024px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 375px) {
+}
+
+@media (min-width: 320px) {
+}
