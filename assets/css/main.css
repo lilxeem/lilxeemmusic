@@ -6,6 +6,8 @@
     --primary-pink-mid: rgb(180, 103, 173);
     --primary-pink-light: rgb(214, 145, 209);
     --primary-pink-lighter: rgb(237, 193, 234);
+    --crown-yellow: rgb(254, 248, 9);
+    --crown-cyan: rgb(35, 233, 244);
     --font-2xl: 3.5rem;
     --font-xl: 2.5rem;
     --font-lg: 2.25rem;
@@ -81,13 +83,13 @@ body {
     justify-content: center;
     position: relative;
     width: 70%;
-    margin: 0;
+    margin: 2rem 0 2rem 0;
     padding: 0;
 }
 
 .header {
     position: relative;
-    margin: 3rem 0 0 0;
+    margin: 0;
     padding: 0;
 }
 
@@ -99,7 +101,7 @@ body {
     padding: 0;
 }
 
-.socials-handle {
+.name {
     position: relative;
     text-align: center;
     font-size: var(--font-2xl);
@@ -109,27 +111,101 @@ body {
 }
 
 /* Social Media Tiles */
+
 .tile-container {
-    position: relative;
-    width: 50%;
-    max-width: 900px;
-    padding: 1.5rem 0;
-    border-radius: 0.8rem;
-    text-align: center;
-    background-color: rgba(143, 62, 135, 0.7);
-    box-shadow: 0 0 20px -8px var(--primary-pink-darker);
-    backdrop-filter: blur(20px);
-    color: var(--primary-pink-light);
-    text-decoration: none;
-    font-size: var(--font-xl);
-    line-height: rem;
-    margin: 1.5rem auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 900px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
 }
 
 .tile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 50%;
+    min-width: 950px;
+    padding: 1.5rem 0;
+    border-radius: 1.5rem;
+    text-align: center;
+    background-color: rgba(254, 248, 9, 0.4);
+    box-shadow: 0 0 10px -4px rgba(254, 248, 9, 0.8);
+    backdrop-filter: blur(20px);
+    color: var(--primary-pink-darker);
+    text-decoration: none;
+    font-size: var(--font-xl);
+    margin: 1rem auto;
+    min-height: 98px;
+    transition: 0.3s;
+}
+.tile:hover {
+    color: var(--primary-pink-dark);
+}
+
+.tile:first-of-type {
+    border-radius: 3.5rem 3.5rem 1.5rem 1.5rem;
+}
+.tile:last-of-type {
+    border-radius: 1.5rem 1.5rem 3.5rem 3.5rem;
+}
+
+.tile-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    max-height: 20px;
+    padding: 1rem 2rem;
+}
+
+
+.tile-icon svg {
+    padding: 0;
+    width: 100%;
+    max-width: 77px;
+    height: 90%;
+    fill: var(--primary-pink-darker);
+    opacity: 0.8;
+    transition: 0.3s;
+}
+.tile-icon svg:hover {
+    fill: var(--primary-pink-dark);
+    opacity: 1;
+}
+
+.tile-content {
+    width: 80%;
     margin: 0;
     padding: 0;
 }
+
+.link-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    padding: 1rem 2rem;
+}
+
+.link-icon svg {
+    padding: 0;
+    width: 80%;
+    max-width: 77px;
+    height: 80%;
+    fill: var(--primary-pink-darker);
+    opacity: 0.8;
+    transition: 0.3s;
+}
+.link-icon svg:hover {
+    fill: var(--primary-pink-dark);
+    opacity: 1;
+}
+
 
 .subtext {
     font-size: var(--font-med);
