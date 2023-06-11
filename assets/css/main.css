@@ -6,8 +6,8 @@
     --primary-pink-mid: rgb(180, 103, 173);
     --primary-pink-light: rgb(214, 145, 209);
     --primary-pink-lighter: rgb(237, 193, 234);
-    --crown-yellow: rgb(254, 248, 9);
-    --crown-cyan: rgb(35, 233, 244);
+    --crown-yellow: rgb(254, 245, 5);
+    --crown-cyan: rgb(98, 183, 201);
     --font-2xl: 3.5rem;
     --font-xl: 2.5rem;
     --font-lg: 2.25rem;
@@ -42,7 +42,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: var(--primary-pink-dark);
+    background-color: var(--primary-pink-darker);
     font-family: "Righteous", cursive;
     color: var(--primary-pink-lighter);
 }
@@ -66,7 +66,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    filter: blur(12px) brightness(0.825);
+    filter: blur(15px) brightness(0.825);
 }
 
 .background img {
@@ -133,8 +133,8 @@ body {
     padding: 1.5rem 0;
     border-radius: 1.5rem;
     text-align: center;
-    background-color: rgba(254, 248, 9, 0.4);
-    box-shadow: 0 0 10px -4px rgba(254, 248, 9, 0.8);
+    background-color: rgba(254, 245, 5, 0.65);
+    box-shadow: 0 0 10px -4px var(--crown-yellow);
     backdrop-filter: blur(20px);
     color: var(--primary-pink-darker);
     text-decoration: none;
@@ -162,7 +162,6 @@ body {
     max-height: 20px;
     padding: 1rem 2rem;
 }
-
 
 .tile-icon svg {
     padding: 0;
@@ -206,10 +205,52 @@ body {
     opacity: 1;
 }
 
-
 .subtext {
     font-size: var(--font-med);
     opacity: 0.8;
+}
+
+#Spotify-tile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 50%;
+    min-width: 950px;
+    padding: 1.5rem 0;
+    border-radius: 1.5rem;
+    text-align: center;
+    background-color: rgba(254, 245, 5, 0.65);
+    box-shadow: 0 0 10px -4px var(--crown-yellow);
+    backdrop-filter: blur(20px);
+    color: var(--primary-pink-darker);
+    text-decoration: none;
+    font-size: var(--font-xl);
+    margin: 1rem auto;
+    min-height: 98px;
+}
+
+.tile-content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    border: none;
+    padding: none;
+    margin: none;
+    transition: 0.3s;
+}
+.tile-content-container:hover {
+    color: var(--primary-pink-dark);
+}
+
+.spotify-embed {
+    width: 92.5%;
+    height: 352px;
+    margin: 1.5rem auto 1rem auto;
 }
 
 /* Making it responsive on different sized devices */
