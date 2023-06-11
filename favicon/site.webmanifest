@@ -3,12 +3,12 @@
     "short_name": "",
     "icons": [
         {
-            "src": "https://github.com/Azeem-Khan1/LilXeem/blob/ef3d1706b441c9db9c0cb023bcf4ec1bf678da64/favicon/android-chrome-192x192.png",
+            "src": "/favicon/android-chrome-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "https://github.com/Azeem-Khan1/LilXeem/blob/ef3d1706b441c9db9c0cb023bcf4ec1bf678da64/favicon/android-chrome-512x512.png",
+            "src": "/favicon/android-chrome-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
         }
