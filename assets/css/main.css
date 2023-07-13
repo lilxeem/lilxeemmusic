@@ -70,9 +70,9 @@ body {
     border: solid 2px var(--primary-pink-mid);
     box-shadow: 0 0 15px -4px var(--primary-pink-light);
     text-align: center;
-    font-size: var(--font-3xs);
+    font-size: .85rem;
     border-radius: 8px;
-    font-weight: 200;
+    font-weight: 300;
     padding: 8px 10px;
     margin: 1rem auto 0 auto;
     display: flex;
@@ -80,7 +80,7 @@ body {
 }
 
 .info-icon {
-    width: 16px;
+    width: 18px;
     margin-right: 8px;
     fill: var(--primary-pink-light);
 }
@@ -126,15 +126,15 @@ body {
     background-image: linear-gradient(
         transparent,
         transparent,
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.6)
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.7)
     );
 }
 
@@ -225,8 +225,6 @@ body {
 }
 .subtext {
     font-size: var(--font-2xs);
-    margin: 0;
-    padding: 0;
     opacity: 0.9;
 }
 
@@ -250,11 +248,12 @@ body {
 }
 
 .tile-content {
+    font-size: var(--font-med);
+    line-height: 1.5rem;
     width: 50%;
     margin: 0;
     padding: 0;
-    font-weight: 500;
-    text-shadow: 0px 0px 2px var(--primary-pink-darker);
+    font-weight: 600;
 }
 
 .link-icon {
