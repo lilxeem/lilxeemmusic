@@ -243,11 +243,6 @@
     }
 }
 
-@media (max-width: 1023px) {
-    .nav {
-        display: none;
-    }
-}
 @media (min-width: 1023px) {
     .desktop-msg {
         display: none;

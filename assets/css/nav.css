@@ -17,6 +17,7 @@
     height: 100svh;
     margin: 0;
     padding: 0;
+    position: relative;
 }
 
 .nav-container li {
@@ -62,7 +63,7 @@
 
 .page-label {
     position: fixed;
-    inset: 0.75rem 0 0 calc(32px + 1rem + 1rem);
+    inset: 0.75rem 0 0 calc(32px + 2rem);
     font-size: var(--font-med);
     width:fit-content;
 }
@@ -156,4 +157,10 @@ div.overlay {
 
 .nav-container input[type="checkbox"]:checked ~ .logo {
     display: none;
+}
+
+@media (max-width: 1023px) {
+    .nav {
+        display: none;
+    }
 }
