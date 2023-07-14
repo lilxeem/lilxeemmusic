@@ -14,7 +14,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
+    height: 100svh;
     margin: 0;
     padding: 0;
 }
@@ -29,7 +29,7 @@
     font-weight: 400;
     font-size: var(--font-sm);
     padding: 0.7rem;
-    transition: 0.2s;
+    transition: 0.1s;
 }
 
 .nav-container a:hover {
@@ -60,6 +60,13 @@
     justify-content: space-between;
 }
 
+.page-label {
+    position: fixed;
+    inset: 0.75rem 0 0 calc(32px + 1rem + 1rem);
+    font-size: var(--font-med);
+    width:fit-content;
+}
+
 .nav-container .hamburger-lines .line {
     display: block;
     height: 4px;
@@ -86,13 +93,13 @@
     display: flex;
     background: rgba(237, 193, 234, 0.6);
     backdrop-filter: blur(15px);
-    height: 100vh;
+    height: 100%;
     width: 100%;
     display: flex;
     padding-top: 6rem;
     transform: translateX(-101%);
     flex-direction: column;
-    transition: 0.3s ease-in-out;
+    transition: 0.3s cubic-bezier(0.6, 0, 0.37, 0.96);
     text-align: center;
     z-index: 2;
 }
