@@ -9,7 +9,7 @@
     /* Colors */
     --primary-pink-darker: rgb(95, 27, 88);
     --primary-pink-dark: rgb(143, 62, 135);
-    --primary-pink-mid: rgb(180, 103, 173);
+    --primary-pink-med: rgb(180, 103, 173);
     --primary-pink-light: rgb(214, 145, 209);
     --primary-pink-lighter: rgb(237, 193, 234);
     --crown-yellow: rgb(254, 245, 5);
@@ -41,7 +41,7 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: var(--primary-pink-mid);
+    background: var(--primary-pink-med);
     border-radius: 0px;
 }
 
@@ -57,6 +57,7 @@ body {
     background-color: var(--primary-pink-darker);
     font-family: "Nunito Sans", sans-serif;
     color: var(--primary-pink-lighter);
+    transition: 0.3s;
 }
 /* Background image (responsive) */
 .background {
@@ -86,3 +87,4 @@ body {
     background: var(--crown-yellow);
     color: var(--primary-pink-darker);
 }
+

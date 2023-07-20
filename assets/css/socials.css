@@ -56,6 +56,7 @@
     justify-content: center;
     position: relative;
     width: 100%;
+    min-height: 100vh;
     padding: 0;
     margin: 0 auto;
     background-image: linear-gradient(
@@ -183,16 +184,7 @@
     opacity: 0.8;
     transition: 0.3s;
 }
-/*
-.link-icon svg:hover {
-    fill: var(--primary-pink-dark);
-    opacity: 1;
-}
 
-
-
-
-*/
 .tile-content-container {
     display: flex;
     flex-direction: row;
@@ -246,5 +238,39 @@
 @media (min-width: 1023px) {
     .desktop-msg {
         display: none;
+    }
+}
+
+@media (min-width: 2005px) {
+    .tile,
+    #Spotify-tile {
+        width: max(65%, 383px);
+        max-width: 800px;
+        min-height: 7rem;
+    }
+    .tile,
+    .tile-content-container {
+        justify-content: space-between;
+    }
+    .pfp {
+        width: 225px;
+    }
+    .name {
+        font-size: var(--font-2xl);
+    }
+    .handle-name {
+        font-size: var(--font-med);
+    }
+    .tile-content {
+        font-size: var(--font-xl);
+    }
+    .subtext {
+        font-size: var(--font-sm);
+    }
+    .tile-icon {
+        margin-left: 0;
+    }
+    .link-icon {
+        margin-right: 0;
     }
 }
