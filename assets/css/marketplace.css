@@ -54,7 +54,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        font-size: 0.8rem;
+        font-size: 0.65rem;
         text-align: center;
         padding: 1rem;
         box-sizing: border-box;
@@ -98,6 +98,19 @@
         background-color: var(--crown-yellow);
         color: var(--primary-pink-darker);
         font-weight: 900;
+    }
+}
+
+@media (min-width: 1280px) {
+    .card {
+        font-size: 0.75rem;
+    }
+}
+
+
+@media (min-width: 1440px) {
+    .card {
+        font-size: 0.8rem;
     }
 }
 
