@@ -123,8 +123,8 @@
     min-height: 50px;
     border-radius: 10px;
     text-align: center;
-    background-color: rgba(250, 254, 5, 0.8);
-    box-shadow: 0 0 14px -4px var(--crown-yellow);
+    background-color: var(--primary-pink-light);
+    box-shadow: 0 0 14px -4px var(--primary-pink-light);
     backdrop-filter: blur(20px);
     color: var(--primary-pink-darker);
     text-decoration: none;

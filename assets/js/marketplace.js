@@ -13,7 +13,7 @@ async function loadCards() {
     console.log(data);
     const itemCount = document.getElementById("item-count");
     itemCount.innerHTML = data.length;
-    
+
     const cardContainer = document.querySelector(".cards-container");
     cardContainer.innerHTML = ""; // Clear previous cards before rendering
 
@@ -52,8 +52,8 @@ async function loadCards() {
         // Create the Purchase (a) element
         const purchaseLink = document.createElement("a");
         purchaseLink.classList.add("button", "purchase");
-        purchaseLink.href = "";
         purchaseLink.textContent = "Purchase";
+        purchaseLink.setAttribute("data-url", linkURL);
 
         // Append elements to the card
         thumbnailContainer.appendChild(thumbnailImage);
@@ -65,6 +65,14 @@ async function loadCards() {
         // Append the card to the container
         cardContainer.appendChild(card);
     }
+    const purchaseLinks = document.querySelectorAll(".purchase");
+    purchaseLinks.forEach((link) => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault();
+            localStorage.setItem("selectedBeat", link.getAttribute("data-url"));
+            window.location.href = "purchase.html";
+        });
+    });
 }
 
 let fullData = [];
@@ -122,7 +130,6 @@ async function renderCards(query) {
         item.snippet.title.toLowerCase().includes(query.toLowerCase())
     );
 
-    
     const itemCount = document.getElementById("item-count");
     itemCount.innerHTML = filtereddata.length;
 
@@ -163,6 +170,7 @@ async function renderCards(query) {
         purchaseLink.classList.add("button", "purchase");
         purchaseLink.href = "";
         purchaseLink.textContent = "Purchase";
+        purchaseLink.setAttribute("data-url", linkURL);
 
         // Append elements to the card
         thumbnailContainer.appendChild(thumbnailImage);
@@ -173,6 +181,18 @@ async function renderCards(query) {
 
         // Append the card to the container
         cardContainer.appendChild(card);
+
+        const purchaseLinks = document.querySelectorAll(".purchase");
+        purchaseLinks.forEach((link) => {
+            link.addEventListener("click", (e) => {
+                e.preventDefault();
+                localStorage.setItem(
+                    "selectedBeat",
+                    link.getAttribute("data-url")
+                );
+                window.location.href = "purchase.html";
+            });
+        });
     }
 }
 

@@ -92,7 +92,7 @@
 
 .menu-items {
     display: flex;
-    background: rgba(237, 193, 234, 0.6);
+    background: rgba(214, 145, 209, 0.9);
     backdrop-filter: blur(15px);
     height: 100%;
     width: 100%;
@@ -134,6 +134,7 @@ div.overlay {
 
 .nav-container input[type="checkbox"]:checked ~ .menu-items {
     transform: translateX(0px);
+    box-shadow: 0px 0px 5px rgba(214, 145, 209);
 }
 
 .nav-container input[type="checkbox"]:checked ~ div.overlay {

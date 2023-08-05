@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" href="assets/css/purchase.css" />
+        <link rel="stylesheet" href="assets/css/nav.css" />
+
+        <title>Lil Xeem Music Purchase Form</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var submitted = false;
+        </script>
+
+        <div class="container">
+            <div class="background">
+                <img
+                    class="background"
+                    id="background-image"
+                    src="assets/img/LilXeemLandingBG.png"
+                    alt="Background image"
+                />
+            </div>
+
+            <a href="marketplace.html">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <path
+                        d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"
+                    />
+                </svg>
+            </a>
+            <h1 class="page-label">Purchase</h1>
+
+            <section class="section">
+                <h1 class="title">Lil Xeem Music Purchase</h1>
+                <form
+                    class="purchaseForm"
+                    action="https://docs.google.com/forms/d/e/1FAIpQLScAoxkDcYXCMk8HC8sCtOJTouycNxr7e-0oOyua50mnysno9g/formResponse"
+                    method="post"
+                    onsubmit="return false;"
+                >
+                    <h2 class="form-header">
+                        <small
+                            >Please fill out this form to purchase a beat from
+                            Lil Xeem</small
+                        >
+                    </h2>
+                    <fieldset>
+                        <legend for="">Email</legend>
+                        <h3>Enter the client's email address</h3>
+                        <div class="form-group">
+                            <input
+                                id="emailAddress"
+                                type="email"
+                                name="emailAddress"
+                                class="form-control"
+                                required
+                            />
+                        </div>
+                    </fieldset>
+
+                    <!-- Field type: "short" id: "139270984" -->
+                    <fieldset>
+                        <legend for="139270984">Artist name</legend>
+                        <h3>Enter the client's full name</h3>
+                        <div class="form-group">
+                            <input
+                                id="703503845"
+                                type="text"
+                                name="entry.703503845"
+                                class="form-control"
+                                required
+                            />
+                        </div>
+                    </fieldset>
+
+                    <!-- Field type: "short" id: "1664826861" -->
+                    <fieldset>
+                        <legend for="1664826861">Selected item</legend>
+                        <h3>
+                            Enter the URL of the item you&#x27;d like to
+                            purchase
+                        </h3>
+                        <div class="form-group">
+                            <input
+                                id="1422154189"
+                                type="text"
+                                name="entry.1422154189"
+                                class="form-control"
+                                required
+                            />
+                        </div>
+                    </fieldset>
+
+                    <!-- Field type: "choices" id: "1710722790" -->
+                    <fieldset>
+                        <legend for="1710722790">
+                            Purchase options (Prices may vary)
+                        </legend>
+                        <div class="form-group">
+                            <div class="radio">
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="entry.252709000"
+                                        value="$30 - MP3 Lease (includes MP3 file, usage agreement, etc.)"
+                                        required
+                                    />
+                                    $30 - MP3 Lease (includes MP3 file, usage
+                                    agreement, etc.)
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="entry.252709000"
+                                        value="$40 - WAV Lease (includes WAV file, usage agreement, etc.)"
+                                        required
+                                    />
+                                    $40 - WAV Lease (includes WAV file, usage
+                                    agreement, etc.)
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Field type: "checkboxes" id: "1934343617" -->
+                    <fieldset>
+                        <legend for="1934343617">
+                            Add-ons (Prices may very)
+                        </legend>
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        name="entry.1505942970"
+                                        value="+$20 - Beat Stems / Track-out (This may not be available depending on the beat)"
+                                    />
+                                    <span class="checkmark"></span>
+                                    +$20 - Beat Stems / Track-out (This may not
+                                    be available depending on the beat)
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        name="entry.1505942970"
+                                        value="+$200 - Exclusive Rights"
+                                    />
+                                    <span class="checkmark"></span>
+                                    +$200 - Exclusive Rights
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Field type: "choices" id: "1277927331" -->
+                    <fieldset>
+                        <legend for="1277927331">Exclusive options</legend>
+                        <h3>
+                            If you added EXCLUSIVE RIGHTS above, what would you
+                            like me to do with the YouTube video for that beat?
+                        </h3>
+                        <div class="form-group">
+                            <div class="radio">
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="entry.1766380642"
+                                        value="Edit it to say that it&#x27;s been sold exclusively"
+                                    />
+                                    Edit it to say that it&#x27;s been sold
+                                    exclusively
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="entry.1766380642"
+                                        value="Make it an unlisted video"
+                                    />
+                                    Make it an unlisted video
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="entry.1766380642"
+                                        value="Delete it"
+                                    />
+                                    Delete it
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Field type: "choices" id: "373881538" -->
+                    <fieldset>
+                        <legend for="373881538">Tagged or untagged?</legend>
+                        <div class="form-group">
+                            <div class="radio">
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="entry.182846486"
+                                        value="Tagged (default)"
+                                        checked
+                                    />
+                                    Tagged (default)
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="entry.182846486"
+                                        value="Untagged (+$5) (This may not be available depending on the beat)"
+                                    />
+                                    Untagged (+$5) (This may not be available
+                                    depending on the beat)
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <!-- Field type: "paragraph" id: "103166798" -->
+                    <fieldset>
+                        <legend for="103166798">
+                            Anything you would like me to know?
+                        </legend>
+                        <div class="form-group">
+                            <textarea
+                                id="412076578"
+                                name="entry.412076578"
+                                class="form-control textarea"
+                            ></textarea>
+                        </div>
+                    </fieldset>
+
+                    <input type="hidden" name="fvv" value="1" />
+                    <input
+                        type="hidden"
+                        name="fbzx"
+                        value="6673233385371082789"
+                    />
+                    <!--
+                        CAVEAT: In multipages (multisection) forms, *pageHistory* field tells to google what sections we've currently completed.
+                        This usually starts as "0" for the first page, then "0,1" in the second page... up to "0,1,2..N" in n-th page.
+                        Keep this in mind if you plan to change this code to recreate any sort of multipage-feature in your exported form.
+                        We're setting this to the total number of pages in this form because we're sending all fields from all the section together.
+                    -->
+                    <input type="hidden" name="pageHistory" value="0" />
+
+                    <input
+                        class="btn btn-primary"
+                        type="submit"
+                        value="Confirm Order"
+                    />
+                </form>
+            </section>
+        </div>
+
+        <script src="assets/js/purchase.js"></script>
+    </body>
+</html>

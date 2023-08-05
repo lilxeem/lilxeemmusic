@@ -162,6 +162,7 @@
         padding: 0.65rem;
         border-radius: 0.75rem;
         background-color: var(--primary-pink-dark);
+        cursor: pointer;
         transition: 0.5s;
     }
     .button:hover {
@@ -179,7 +180,10 @@
 
 @media (min-width: 1440px) {
     .card {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
+    }
+    .button {
+        font-size: var(--font-2xs);
     }
 }
 
@@ -188,5 +192,15 @@
     .search-bar {
         width: calc(100vw - 940px);
         max-width: 1500px;
+    }
+
+    .search, .search::placeholder {
+        font-size: var(--font-sm);
+    }
+    .card {
+        font-size: 1rem;
+    }
+    .button {
+        font-size: var(--font-xs);
     }
 }
