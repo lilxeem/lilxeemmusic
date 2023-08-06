@@ -61,7 +61,7 @@ body {
 }
 /* Background image (responsive) */
 .background {
-    z-index: -1;
+    z-index: -3;
     position: fixed;
     inset: 0;
     width: 100%;
