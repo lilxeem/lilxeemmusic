@@ -21,7 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 // For example, showing a success message or redirecting
             } catch (error) {
                 console.error("Error submitting form data:", error);
-                alert("An error occurred during the submission of this form. Please try again later.")
+
+                window.location.href='success.html';
                 // Handle error, show error message, etc.
             }
         }
