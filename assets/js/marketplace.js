@@ -190,7 +190,7 @@ async function renderCards(query) {
                     "selectedBeat",
                     link.getAttribute("data-url")
                 );
-                window.location.href = "purchase.html";
+                window.location.href = "purchase";
             });
         });
     }

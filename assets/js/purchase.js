@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
             } catch (error) {
                 console.error("Error submitting form data:", error);
 
-                window.location.href='success.html';
+                window.location.href='success';
                 // Handle error, show error message, etc.
             }
         }
@@ -41,7 +41,7 @@ async function submitFormData() {
             body: formData,
         });
 
-        window.location.href='success.html';
+        window.location.href='success';
     } catch (error) {
         throw new Error("Failed to submit form data: " + error.message);
     }
