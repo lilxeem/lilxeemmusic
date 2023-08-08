@@ -133,6 +133,12 @@
     -webkit-tap-highlight-color: transparent;
     transition: 0.3s;
 }
+
+.tile:hover, #Spotify-tile:hover {
+    transform: scale(1.025);
+    background: var(--primary-pink-lighter);
+}
+
 #Spotify-tile {
     display: flex;
     flex-direction: column;
@@ -148,6 +154,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.tile-icon:hover svg {
+    fill: var(--primary-pink-dark);
+    transform: scale(1.035);
 }
 
 .tile-icon svg {
@@ -175,14 +186,20 @@
     align-items: center;
     justify-content: center;
     width: 15%;
+    transition: 0.3s;
 }
 
 .link-icon svg {
     padding: 0;
-    width: min(75%, 60px);
+    width: min(70%, 50px);
     fill: var(--primary-pink-darker);
     opacity: 0.8;
     transition: 0.3s;
+}
+
+.link-icon svg:hover {
+    transform: scale(1.035);
+    fill: var(--primary-pink-dark)
 }
 
 .tile-content-container {

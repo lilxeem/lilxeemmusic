@@ -70,11 +70,16 @@
                         id="searchBar"
                         placeholder="Search by name"
                     />
-                    <p class="item-count"><span id="item-count">~</span> items</p>
+                    <p class="item-count">
+                        <span id="item-count">~</span> items
+                    </p>
                 </div>
                 <div class="cards-container">
                     <div class="placeholder-container"></div>
-                    <span class="loading-text">Loading...</span>
+                    <div class="loading-container">
+                        <span class="loading-text">Loading</span>
+                        <div id="loading"></div>
+                    </div>
                     <!-- Cards will be created here (see marketplace.js line 3.) -->
                 </div>
             </section>

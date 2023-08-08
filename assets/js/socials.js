@@ -8,9 +8,9 @@ async function copyText(e) {
     const link = this.getAttribute("link");
     try {
         await navigator.clipboard.writeText(link);
-        alert("Copied the link: " + link);
+        alert("Link copied to clipboard!");
     } catch (err) {
-        console.log(err);
+        console.error(err);
     }
 }
 
