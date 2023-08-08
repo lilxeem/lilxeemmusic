@@ -1,4 +1,4 @@
 # Lil Xeem
 Lil Xeem website (socials, contact, beat downloads, etc...)
 
-View here: https://lilxeem.github.io/lilxeemmusic
+View here: https://lilxeem.com
