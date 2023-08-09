@@ -2,7 +2,78 @@
     display: none;
 }
 
+.dt-message-container {
+    width: 70%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    backdrop-filter: blur(50px);
+    margin: 4rem auto;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+.dt-title {
+    text-align: center;
+    font-size: var(--font-2xs);
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+.dt-message {
+    font-size: var(--font-3xs);
+    margin-bottom: 0.65rem;
+    font-weight: 300;
+}
+.return-button {
+    margin: 0 auto;
+    font-size: var(--font-3xs);
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--primary-pink-lighter);
+    width: fit-content;
+    padding: 0.5rem;
+    border-radius: 0.75rem;
+    background-color: var(--primary-pink-dark);
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+@media (min-width: 425px) {
+    .dt-title {
+        font-size: var(--font-xs);
+    }
+    .dt-message {
+        font-size: var(--font-2xs);
+    }
+    .return-button {
+        font-size: var(--font-2xs);
+        padding: 0.75rem;
+    }
+}
+@media (min-width: 768px) {
+    .dt-title {
+        font-size: var(--font-sm);
+    }
+    .dt-message {
+        font-size: var(--font-xs);
+    }
+    .return-button {
+        font-size: var(--font-xs);
+        padding: 0.75rem;
+    }
+}
+
 @media (min-width: 1023px) {
+    .dt-message-container{
+        display: none;
+    }
+
     .section {
         display: flex;
         flex-direction: column;
@@ -35,14 +106,13 @@
         min-height: 15rem;
         margin: auto;
         padding: 2rem 4rem;
-        border-radius: 0.75rem;
-        background-color: rgba(0, 0, 0, 0.15);
-        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+        border-radius: 1rem;
+        background-color: rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
 
     }
 
     .title {
-        position: relative;
         text-align: center;
         font-size: var(--font-lg);
         font-weight: 700;
@@ -53,10 +123,16 @@
     .message {
         font-size: var(--font-xs);
         margin-bottom: 0.65rem;
+        font-weight: 300;
+    }
+
+    .message span {
+        font-size: var(--font-sm);
+        font-weight: 500;
     }
 
     .button {
-        margin: 0.5rem auto;
+        margin: 0 auto;
         font-size: var(--font-2xs);
         font-weight: 600;
         text-decoration: none;
@@ -65,12 +141,13 @@
         padding: 0.75rem;
         border-radius: 0.75rem;
         background-color: var(--primary-pink-dark);
+        -webkit-tap-highlight-color: transparent;
         cursor: pointer;
         transition: 0.3s;
     }
     .button:hover {
-        background-color: var(--crown-yellow);
-        color: var(--primary-pink-darker);
+        background-color: var(--primary-pink-lighter);
+        color: var(--primary-pink-dark);
         transform: translateY(-4px);
     }
 }

@@ -101,6 +101,7 @@
     transform: translateX(-101%);
     flex-direction: column;
     transition: 0.3s cubic-bezier(0.6, 0, 0.37, 0.96);
+    -webkit-tap-highlight-color: transparent;
     text-align: center;
     z-index: 2;
 }
