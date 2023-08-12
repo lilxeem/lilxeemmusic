@@ -329,11 +329,8 @@ div.overlay {
     transition: 0.3s;
 }
 
-/* .active:hover::before{
-    box-shadow: -1rem 0rem 0 var(--primary-pink-light);
+@media (max-width: 1023px) {
+    .navbar {
+        display: none;
+    }
 }
-
-.active:hover::after {
-    
-    box-shadow: -1rem 0rem 0 var(--primary-pink-light);
-} */
