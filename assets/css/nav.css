@@ -193,16 +193,15 @@ div.overlay {
 .navbar {
     position: fixed;
     background: linear-gradient(
-        rgba(0, 0, 0, 0.25),
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 1)
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.5)
     );
     backdrop-filter: blur(5px);
-    box-shadow: inset 0px 0px 150px -10px rgba(95, 27, 88, 0.35);
+    /* box-shadow: inset 0px 0px 150px -10px rgba(95, 27, 88, 0.35); */
     transition: width 0.3s ease-in-out;
     overflow: hidden;
     top: 0;
-    width: 5.5rem;
+    width: 5rem;
     height: 100vh;
     border-top-right-radius: 0.75rem;
     border-bottom-right-radius: 0.75rem;
@@ -249,41 +248,40 @@ div.overlay {
     font-size: var(--font-xs);
     align-items: center;
     height: 5rem;
-    color: var(--primary-pink-med);
+    color: var(--primary-pink-light);
     text-decoration: none;
     font-weight: 700;
     transition: 0.3s;
-    margin-right: 0.5rem;
+    /* margin-right: 2rem; */
     border-top-right-radius: 1.25rem;
     border-bottom-right-radius: 1.25rem;
     cursor: pointer;
 }
 
 .nav-link:hover {
-    color: var(--primary-pink-light);
-}
-
-.nav-link:hover svg {
-    fill: var(--primary-pink-light);
+    color: var(--primary-pink-lighter);
 }
 
 .nav-link svg {
     width: 2rem;
     min-width: 2rem;
-    margin: 0 1.5rem;
-    fill: var(--primary-pink-med);
+    margin: 0 1.5rem 0 1.65rem;
+    fill: var(--primary-pink-light);
     transition: 0.2s;
 }
+.nav-link:hover svg {
+    fill: var(--primary-pink-lighter);
+}
+
 .nav-link svg {
-    scale: 115%;
+    scale: 105%;
 }
 .nav-item:first-child svg {
-    scale: 135%;
+    scale: 130%;
 }
 
-
 .active {
-    background-color: var(--primary-pink-med);
+    background-color: var(--primary-pink-light);
     color: var(--primary-pink-darker);
 }
 .active svg {
@@ -291,41 +289,40 @@ div.overlay {
 }
 
 .active:hover {
-    background-color: var(--primary-pink-med);
-    color: var(--primary-pink-darker);    
+    background-color: var(--primary-pink-light);
+    color: var(--primary-pink-darker);
 }
 .active:hover svg {
     fill: var(--primary-pink-darker);
-
 }
 
 .navbar::after {
     content: "";
     width: 0.35rem;
-    background: var(--primary-pink-med);
+    background: var(--primary-pink-light);
     position: absolute;
     inset: 0;
 }
 .active::before {
-    content: '';
+    content: "";
     position: absolute;
     width: 2rem;
     height: 1rem;
     inset: -1rem 0 0 0.35rem;
     background: transparent;
     border-radius: 0 0 0 1rem;
-    box-shadow: -1rem 0rem 0 var(--primary-pink-med);
+    box-shadow: -1rem 0rem 0 var(--primary-pink-light);
     transition: 0.3s;
 }
 .active::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 2rem;
     height: 1rem;
     inset: 5rem 0 0 0.35rem;
     background: transparent;
     border-radius: 1rem 0 0 0;
-    box-shadow: -1rem 0rem 0 var(--primary-pink-med);
+    box-shadow: -1rem 0rem 0 var(--primary-pink-light);
     transition: 0.3s;
 }
 
