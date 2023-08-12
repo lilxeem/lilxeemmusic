@@ -15,6 +15,7 @@
     --crown-yellow: rgb(254, 245, 5);
     --crown-cyan: rgb(98, 183, 201);
     /* Font sizes */
+    font-size: 16px;
     --font-4xl: 6rem;
     --font-3xl: 4rem;
     --font-2xl: 3.5rem;
