@@ -98,7 +98,7 @@ a[href="marketplace"] {
         );
     }
 
-    a[href="marketplace"] {
+    a[href="/"] {
         display: block;
         position: fixed;
         height: 32px;

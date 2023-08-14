@@ -17,11 +17,14 @@ document.addEventListener("DOMContentLoaded", function () {
             // Validation passed, submit form data
             try {
                 await submitFormData();
+                localStorage.clear();
+                document.getElementById('1422154189').value = '';
                 // You can add additional logic here if needed
                 // For example, showing a success message or redirecting
             } catch (error) {
                 console.error("Error submitting form data:", error);
-
+                localStorage.clear();
+                document.getElementById('1422154189').value = '';
                 window.location.href='success';
                 // Handle error, show error message, etc.
             }
