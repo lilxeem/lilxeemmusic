@@ -70,7 +70,7 @@ async function loadCards() {
         link.addEventListener("click", (e) => {
             e.preventDefault();
             localStorage.setItem("selectedBeat", link.getAttribute("data-url"));
-            window.location.href = "purchase.html";
+            window.location.href = "purchase";
         });
     });
 }
