@@ -7,6 +7,20 @@ if (localStorage.getItem("selectedBeat") === null) {
     urlField.value = localStorage.getItem("selectedBeat");
 }
 
+// Lazy loading background
+const bg = document.querySelector(".background");
+const bgimg = bg.querySelector(".background-img");
+function loaded() {
+    bg.classList.add("loaded");
+}
+
+if (bgimg.complete) {
+    loaded();
+} else {
+    bgimg.addEventListener("load", loaded);
+}
+
+// Submit form when submit button is clicked
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector(".purchaseForm");
 
@@ -31,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-
+// Submitting form to Google Form
 async function submitFormData() {
     const form = document.querySelector(".purchaseForm");
     const formData = new FormData(form);
@@ -50,6 +64,7 @@ async function submitFormData() {
     }
 }
 
+// Cleaning inputs
 function sanitizeEmail() {
     let userEmail = document.getElementById("emailAddress").value;
 

@@ -1,3 +1,5 @@
+
+// Utility funtion might be useful for extracting beat names from youtube titles
 function extractTextBetweenQuotes(inputString) {
     const regex = /"(.*?)"/; // Regular expression to match text between quotes
     const matches = inputString.match(regex);
@@ -8,6 +10,22 @@ function extractTextBetweenQuotes(inputString) {
     }
 }
 
+
+// Lazy loading background
+const bg = document.querySelector(".background");
+const bgimg = bg.querySelector(".background-img");
+function loaded() {
+    bg.classList.add("loaded");
+}
+
+if (bgimg.complete) {
+    loaded();
+} else {
+    bgimg.addEventListener("load", loaded);
+}
+
+
+// Load cards initially (on page load)
 async function loadCards() {
     let data = await loadClient();
     console.log(data);
@@ -34,6 +52,7 @@ async function loadCards() {
         thumbnailContainer.classList.add("thumbnail-container");
         const thumbnailImage = document.createElement("img");
         thumbnailImage.classList.add("thumbnail");
+        thumbnailImage.setAttribute("loading", "lazy");
         thumbnailImage.src = thumbnail;
         thumbnailImage.alt = "";
 
@@ -53,6 +72,7 @@ async function loadCards() {
         const purchaseLink = document.createElement("a");
         purchaseLink.classList.add("button", "purchase");
         purchaseLink.textContent = "Purchase";
+        // data-url attribute used to autofill url field in purchase form through local storage
         purchaseLink.setAttribute("data-url", linkURL);
 
         // Append elements to the card
@@ -75,8 +95,14 @@ async function loadCards() {
     });
 }
 
+
+// Calls to GAPI only return up to 50 items
+
+// Responses from calls will concatenate into this singular array
 let fullData = [];
 
+// Page Token for next and previous page is returned in current call
+// Page token allows for the next call to be made so the response contains 50 subsequent videos
 let pageToken = null;
 
 async function loadClient() {
@@ -96,7 +122,8 @@ async function loadClient() {
     }
 }
 
-// getting videos
+
+// Getting videos
 async function getData(token) {
     try {
         const response = await gapi.client.youtube.playlistItems.list({
@@ -120,6 +147,8 @@ gapi.load("client:auth2", function () {
     });
 });
 
+
+//Re-rendering cards after search query has been entered
 async function renderCards(query) {
     let data = await loadClient();
 
@@ -150,6 +179,7 @@ async function renderCards(query) {
         thumbnailContainer.classList.add("thumbnail-container");
         const thumbnailImage = document.createElement("img");
         thumbnailImage.classList.add("thumbnail");
+        thumbnailImage.setAttribute("loading", "lazy");
         thumbnailImage.src = thumbnail;
         thumbnailImage.alt = "";
 
@@ -170,6 +200,7 @@ async function renderCards(query) {
         purchaseLink.classList.add("button", "purchase");
         purchaseLink.href = "";
         purchaseLink.textContent = "Purchase";
+        // data-url attribute used to autofill url field in purchase form through local storage
         purchaseLink.setAttribute("data-url", linkURL);
 
         // Append elements to the card
@@ -196,6 +227,8 @@ async function renderCards(query) {
     }
 }
 
+
+// Filter video results based on search query
 function searchByBeatName(query) {
     const filteredData = glblData.filter((item) =>
         item.snippet.title.toLowerCase().includes(query.toLowerCase())
@@ -203,6 +236,7 @@ function searchByBeatName(query) {
     renderCards(filteredData);
 }
 
+// Functional search bar
 document.addEventListener("DOMContentLoaded", async function () {
     try {
         const searchBar = document.getElementById("searchBar");

@@ -17,3 +17,16 @@ async function copyText(e) {
 shareButtons.forEach((shareButton) =>
     shareButton.addEventListener("click", copyText)
 );
+
+// Lazy loading background
+const bg = document.querySelector(".background");
+const bgimg = bg.querySelector(".background-img");
+function loaded() {
+    bg.classList.add("loaded");
+}
+
+if (bgimg.complete) {
+    loaded();
+} else {
+    bgimg.addEventListener("load", loaded);
+}
