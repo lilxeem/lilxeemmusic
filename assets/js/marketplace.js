@@ -46,7 +46,7 @@ async function loadCards() {
         const card = document.createElement("div");
         card.classList.add("card");
         card.setAttribute("id", extractTextBetweenQuotes(beatName));
-        card.onclick = linkURL;
+        card.href = linkURL;
         card.target = "_blank";
 
         // Create the thumbnail container div and image element
@@ -57,7 +57,7 @@ async function loadCards() {
         thumbnailImage.setAttribute("loading", "lazy");
         thumbnailImage.src = thumbnail;
         thumbnailImage.alt = "";
-        thumbnailImage.onclick = linkURL;
+        thumbnailImage.href = linkURL;
         thumbnailImage.target = "_blank";
 
         // Create the BeatName (h2) element
